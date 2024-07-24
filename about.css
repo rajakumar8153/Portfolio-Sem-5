@@ -1,0 +1,91 @@
+#about {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  ::selection {
+    color: black;
+    background-color: #bea060;
+  }
+  header {
+    width: 100%;
+    height: 160vh;
+    background-color: black;
+    display: flex;
+  }
+  .header-left-side {
+    padding: 0 0 0 90px;
+    color: white;
+  }
+  .header-left-side h1 {
+    color: darkmagenta;
+    line-height: 1.2em;
+    font-size: 50px;
+    padding-top: 100px;
+    margin-bottom: 20px;
+    font-weight: 400 !important;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .header-left-side h2 {
+    color: magenta;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 5px;
+  }
+  .header-left-side p1,p2 {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: white;
+    line-height: 2;
+    
+  }
+
+.para{
+    width: 80%;
+}
+
+
+  button {
+    padding: 20px 10px;
+    border: 2px solid #bea060;
+    background: transparent;
+    width: 47%;
+    color: white;
+    margin-right: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  button:hover {
+    background-color: #bea060;
+    transition: 0.7s;
+  }
+  .btnn {
+    width: 10%;
+    background-color:teal;
+  }
+  .header-left-side h3 {
+    color: #c1bfbf;
+    padding-top: 80px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+  .header-right-side img {
+    width: 670px;
+    height: 884px;
+    margin-top: 15%;
+  }
