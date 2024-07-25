@@ -3,6 +3,7 @@
 :root {
     
     --max-width: 1200px;
+    
     background-color: lightsteelblue;
     
     scroll-behavior: smooth;
