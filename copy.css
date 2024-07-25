@@ -2,7 +2,7 @@
 
 :root {
     
-    --max-width: 1200px;
+    
     background-color: lightsteelblue;
     
     scroll-behavior: smooth;
@@ -355,5 +355,69 @@ header nav a.active {
     padding: 2em;
 }
 
-.experience ul {
-    list-style
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#projects {
+    position: relative;
+    padding-top: 150px;
+  }
+
+
+  
+  .color-container {
+    border-color: rgb(163, 163, 163);
+    
+  }
+  
+  .project-img {
+    border-radius: 0rem;
+    width: 40%;
+    height: 40%;
+    position: relative;
+    left: 700px;
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: black;
+    
+  }
+  
+  .project-btn {
+    color: black;
+    border-color: rgb(163,163,163);
+  }
+  h4{
+    position: relative;
+    bottom: 250px;
+    left: 50px;
+    width: 40%;
+  }
+
+  .section_text_p1,.titlee{
+      position: relative;
+      
+      left: 200px;
+      font-size: 30px;
+    }
+    .titlee{
+    padding-bottom: 100px;
+    }
+
+
+
+    /*unknown*/
+
+
