@@ -1,205 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-<!DOCTYPE html>
-<html lang="en">
-  <title>Portfolio</title>
+:root {
+    
+    --max-width: 1200px;
+    background-color: lightsteelblue;
+    --text-light: white;
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url("sign.png");
+    background-repeat: no-repeat;
+    background-size: 270px 100px;
+    background-position: 930px 10px;
+    
+}
 
-  <head>
-    <link rel="stylesheet" href="copy.css" />
-    <title>Portfolio</title>
-  </head>
+* {
   
-  
-  
-  <body>
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 25px;
+  left: 300px;
+
+  z-index: 99;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
-    <nav>
-      <div class="navbar">
-        
-        
-        <div class="logo"></div>
-        
-        
-        
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    
-    
-    
-    
-    <section class="section" id="Home">
-      <div class="section__container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h1 class="title">
-            I'm <span>RAJAKUMAR S<br /></span> Student at SKCT
-          </h1>
-          <p class="description">
-            I aspire for a challenging position in a professional Organization
-            where i can enhance my professional skills and strength my
-            performance in adding with organization's motto.Myself a Team
-            player with an eye for detail.
-          </p>
-          <div class="action__btns">
-            <button onclick="window.location.href='#contact'" class="contact" >Contact ↗</button>
-          </div>
-        </div>
-        <div class="image">
-          <img src="profile.jpg" alt="profile" />
-        </div>
-      </div>
-    </section>
-  </body>
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: all 0.3 ease-in;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+  font-size:larger;
+}
+
+ul li a:hover {
+  color: blueviolet;
+}
 
 
 
-  <!--about-->
+
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: lightgreen;
+  color: #ffffff;
+}
+
+.contact:hover {
+  background-color: black;
+}
+
+
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+  width: min(25rem, 50%);
+  border-radius: 100px;
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+    nav .checkbox {
+        display: block;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    
+    ul li a {
+        font-size: 1.25rem;
+    }
+    
+    .section__container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .action__btns {
+        margin: auto;
+    }
+}
+
+
+
+
+#contact {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: lightsteelblue;
+    padding-top: 50px;
+    
+    
+    
+}
+
+
+.form-group {
+    margin-bottom: px;
+    
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: lightyellow;
+    border-radius: 10px;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #3e8e41;
+}
   
-  <section id="about">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about        */
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a.active {
+    color: #ccc;
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, #333, #444);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-me {
+    padding: 2em;
+}
+
+.about-me h2 {
+    margin-top: 0;
+}
+
+.skills {
+    padding: 2em;
+    background-color: #f7f7f7;
+}
+
+.skills ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+.skills li:before {
+    content: "\2713";
+    margin-right: 10px;
+    color: #333;
+}
+
+.experience {
+    padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#projects {
+    position: relative;
+    padding-top: 150px;
+  }
+
+
+  
+  .color-container {
+    border-color: rgb(163, 163, 163);
     
-    <link rel="stylesheet" href="about.css" />
+  }
+  
+  .project-img {
+    border: 2px solid black;
+    width: 35%;
+    height: 35%;
+    position: relative;
+    left: 800px;
     
-    <div class="header-left-side">
-      <h1>
-        ABOUT ME
-      </h1>
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: black;
+    
+  }
+  
+  .project-btn {
+    color: black;
+    border-color: rgb(163,163,163);
+  }
+  h4{
+    position: relative;
+    bottom: 250px;
+    left: 50px;
+    width: 40%;
+  }
+
+  .section_text_p1,.titlee{
+      position: relative;
       
-      
-      <div class="para">
-      <p>
-        Hello! I'm Rajakumar, a passionate and dedicated second-year Electronics and 
-        Communication Engineering (ECE) student at Sri Krishna College of Technology. 
-        My journey in the world of technology and communication systems 
-        has been both exciting and fulfilling, shaping my career aspirations and goals.
-      </br>
-  Currently, I am pursuing my undergraduate degree in ECE, where I am honing my skills in electronics, 
-  communication systems, and related technologies. My academic journey has been enriched with various projects
-  and practical experiences that have deepened my understanding and enthusiasm for this field.
-  
-  </div>
-      </p>
-      
-      <div id="socials-container">
-        <img src="linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/rajakumar-s-ba3398255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'" />
-        <img src="git.png" alt="My Github profile" class="icon" id="conn"
-          onclick="location.href='https://github.com/rajakumar8153'" />
-        <img src="insta.png" alt="My insta profile" class="icon" id="conn"
-          onclick="location.href='https://www.instagram.com/rajakumar._17/'" />
-
-</div>
-  
-      
+      left: 200px;
+      font-size: 30px;
+    }
+    .titlee{
+    padding-bottom: 100px;
+    text-decoration:underline;
+    }
     
-    </div>
+    .article-container .project-img:hover {
+      transform: scale(1.1);
+      opacity: 75%;
+    }
     
-  
-        </section>
 
 
 
-  
-                                           
-  <!-- PROJECT -->
-  <section id="projects">
-    
-    <h1 class="titlee">My Recent Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-
-
-            <img src="project1.png" alt="Project 1" onclick="location.href='https://github.com/rajakumar8153/ski-project-1'" class="project-img" />
-          </div>
-          <h4 class="experience-sub-title project-title">"SKI FOODS - website designed for ordering food online and can be deployed for hotel specifically"</h4>
-          <div class="btn-container">
-            
-
-
-           
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="project2.png" alt="Project 2" onclick="location.href='https://github.com/rajakumar8153/CodeSoft-Internship'" class="project-img" />
-          </div>
-          <h4 class="experience-sub-title project-title">"DITTY.IN - Music streaming platform like website,users can play,pause and enjoy songs of their choice"</h4>
-          <div class="btn-container">
-           
-          </div>
-        </div>
-        
-</section>
-
-
-
-  <!-- CONTACT -->
-  
-  <section id="contact">
-  </br>
-
-
-
-
-  
-    <h1>Get in Touch</h1>
-    <p>Want to discuss a project or just say hello? I'd love to hear from you!</p>
-    
-    
-    <form id="contact-form">
-      <div class="form-group">
-
-
-
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      
-
-      
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      
-      <button onclick="location.href='#'" type="submit" class="btn-submit">Send Message</button>
-    </form>
-  </br>
-    <h2>Contact Information</h2>
-</br>
-    <ul class="contact-info">
-      <li>
-        <i class="mail"></i>
-        <a href="727822tuec144@skct.edu.in">727822tuec144@skct.edu.in</a>
-      </li>
-      <li>
-        <i class="phone"></i>
-        6385891759
-      </li>
-      <li>
-        <i class="place"></i>
-        Neyveli
-      </li>
-    </ul>
-    
-    
-  </section>
-
-</html>
